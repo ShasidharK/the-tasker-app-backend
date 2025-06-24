@@ -24,6 +24,9 @@ app.use('/api/lists', listRoutes)
 app.use('/api/cards', cardRoutes)
 app.use('/api/checklists', checklistRoutes)
 app.use('/api/checklist-items', checklistItemRoutes)
+app.get('/', (req, res) => {
+  res.send('API is running');
+});
 
 // Database sync and server start
 sequelize.sync()
